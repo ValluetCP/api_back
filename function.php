@@ -14,24 +14,24 @@ function dbConnect(){
 //fonction pour enregistrer un utilisateur
 function register($firstname,$lastname,$pseudo,$password){
     //hasher le mot de passe
-    $passwordCrypt = password_hash($password,PASSWORD_DEFAULT);
+    $passwordCrypt = password_hash($password, PASSWORD_DEFAULT);
 
     //connexion a la bd
     $db = dbConnect();
 
     // preparer la requete
-    $request = $db->prepare("INSERT INTO users (firstname, lastname,pseudo, password) VALUES (?,?,?,?)");
+    $request = $db->prepare("INSERT INTO users (firstname, lastname, pseudo, password) VALUES (?,?,?,?)");
 
     try {
         $request->execute(array($firstname,$lastname,$pseudo,$passwordCrypt));
-        return json_encode([
+        echo json_encode([
             "status" => 201,
-            "message" => "everything good",
+            "message" => "everything good"
         ]);
     } catch (PDOException $e) {
-        return json_encode([
+        echo json_encode([
             "status" => 500,
-            "message" => "internal server error",
+            "message" => $e->getMessage()
         ]);
     }
 }
@@ -72,9 +72,9 @@ function login($pseudo, $password){
             }
         }
     } catch (PDOException $e) {
-        return json_encode([
+        echo json_encode([
             "status" => 500,
-            "message" => "internal server error",
+            "message" => $e->getMessage()
         ]);
     }
 
