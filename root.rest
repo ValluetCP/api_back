@@ -39,9 +39,11 @@ POST http://localhost/api_back/
 
 
 {
-    "expeditor": 4,
-    "receiver": 3,
-    "message": "contenu du message",
+    "expeditor": 3,
+    "receiver": 4,
+    "message": "comment tu vas?",
     "action": "send message"
 
 }
+###
+GET http://localhost/api_back/getListMessage/3/4

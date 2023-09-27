@@ -21,6 +21,13 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 
     if($action == "getuserlist"){
         getListUser();
+    }else if($action == "getListMessage"){
+        getListMessage($url[2], $url[3]);
+    }else{
+        echo json_encode([
+            "status"     => 404,
+            "message"    => "not found "
+        ]);
     }
     
 }
