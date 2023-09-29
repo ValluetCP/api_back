@@ -10,7 +10,8 @@ POST http://localhost/api_back/
     "password": "robs60",
     "action": "login"
     // ce format de donnée est du json
-    
+    // c'est pour cela que l'on utilise la fonction json_decode pour que PHP puisse comprendre le langage (cf : fichier index.php)
+    // json_encode : converti en format JSON
     
 
 }

@@ -25,11 +25,13 @@ function register($firstname,$lastname,$pseudo,$password){
     try {
         $request->execute(array($firstname,$lastname,$pseudo,$passwordCrypt));
         echo json_encode([
+        // json_encode : converti en format JSON
             "status" => 201,
             "message" => "everything good"
         ]);
     } catch (PDOException $e) {
         echo json_encode([
+        // json_encode : converti en format JSON
             "status" => 500,
             "message" => $e->getMessage()
         ]);
