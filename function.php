@@ -129,8 +129,9 @@ function getListUser(){
     } catch (PDOException $e) {
         echo json_encode([
             "status" => 500,
-            "message" => "Voici la liste des users",
-            "data" => $e->getMessage()
+            "message" => $e->getMessage()
+            // "message" => "Voici la liste des users",
+            // "data" => $e->getMessage()
         ]);
     }
 }

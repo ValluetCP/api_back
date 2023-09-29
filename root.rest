@@ -41,7 +41,7 @@ POST http://localhost/api_back/
 {
     "expeditor": 3,
     "receiver": 4,
-    "message": "comment tu vas?",
+    "message": "Ah oui c'est vrai, tu vas au festival ?",
     "action": "send message"
 
 }
