@@ -26,13 +26,19 @@ POST http://localhost/api_back/
 
 
 {
-    "pseudo": "robin des bois",
-    "password": "robs60",
-    "firstname": "Andrews",
-    "lastname": "ROBIN",
+    "pseudo": "KP",
+    "password": "star",
+    "firstname": "Keith",
+    "lastname": "POWERS",
     "action": "register"
 
 }
+    
+    # "pseudo": "robin des bois",
+    # "password": "robs60",
+    # "firstname": "Andrews",
+    # "lastname": "ROBIN",
+    # "action": "register"
 
 
 ###

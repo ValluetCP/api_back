@@ -106,8 +106,6 @@ function sendMessage($expeditor, $receiver, $message){
             "message" => $e->getMessage()
         ]);
     }
-
-
 }
 
 //fonction pour récupérer la liste des users
