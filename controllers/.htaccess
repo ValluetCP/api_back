@@ -1,0 +1,4 @@
+# RActiver la règle de réércriture d'url
+RewriteEngine on
+# Rediriger vers le fichier index
+RewriteRule (.*) index.php?q=$1 [L]
